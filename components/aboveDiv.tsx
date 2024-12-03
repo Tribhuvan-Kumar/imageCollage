@@ -1,9 +1,8 @@
 "use client";
 
-import { dataOfImages } from "@/utils/contants";
-import { AppDispatch, RootState } from "@/utils/store";
+import { RootState } from "@/utils/store";
 import Image from "next/image";
-import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { TypedUseSelectorHook, useSelector } from "react-redux";
 
 const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
 
