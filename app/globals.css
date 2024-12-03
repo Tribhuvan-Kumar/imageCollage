@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.img-custom {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes waiting {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.parent-custom {
+  animation: waiting 1s ease-in-out;
+  animation-fill-mode: forwards; /* Persist the final animation state */
+  opacity: 0; /* Initial state is hidden */
+}
+
+/* Toggle */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #000000;
+}
